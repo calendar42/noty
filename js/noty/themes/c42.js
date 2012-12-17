@@ -45,8 +45,8 @@
 			});
 
 			this.$message.css({
-				fontSize: '13px',
-				lineHeight: '16px',
+				fontSize: '15px',
+				lineHeight: '18px',
 				textAlign: 'center',
 				padding: '8px 10px 9px',
 				width: 'auto',
@@ -97,7 +97,7 @@
 						border: '1px solid #eee',
 						boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
 					});
-					this.$message.css({fontSize: '13px', textAlign: 'center'});
+					this.$message.css({fontSize: '15px', textAlign: 'center'});
 				break;
 				case 'topLeft': case 'topRight':
 				case 'bottomLeft': case 'bottomRight':
@@ -107,7 +107,7 @@
 						border: '1px solid #eee',
 						boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
 					});
-					this.$message.css({fontSize: '13px', textAlign: 'left'});
+					this.$message.css({fontSize: '15px', textAlign: 'left'});
 				break;
 				case 'bottom':
 					this.$bar.css({
@@ -130,7 +130,7 @@
 				case 'alert': case 'notification':
 					this.$bar.css({backgroundColor: '#FFF', borderColor: '#CCC', color: '#444'}); break;
 				case 'warning':
-					this.$bar.css({backgroundColor: '#FAA732', borderColor: '#F89406', color: '#826200'});
+					this.$bar.css({backgroundColor: '#FAA732', borderColor: '#F89406', color: '#444'});
 					this.$buttons.css({borderTop: '1px solid #FFC237'}); break;
 				case 'error':
 					this.$bar.css({backgroundColor: '#DA4F49', borderColor: '#BD362F', color: '#FFF'});
