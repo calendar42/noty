@@ -14,8 +14,8 @@
 						case 'bottomCenter': case 'bottomLeft': case 'bottomRight':
 						case 'center': case 'centerLeft': case 'centerRight': case 'inline':
 							$(selector).css({borderRadius: '0px 0px 0px 0px'});
-							$(selector).first().css({'border-top-left-radius': '5px', 'border-top-right-radius': '5px'});
-							$(selector).last().css({'border-bottom-left-radius': '5px', 'border-bottom-right-radius': '5px'}); break;
+							$(selector).first().css({'border-top-left-radius': '0px', 'border-top-right-radius': '0px', 'border-width': '4px'});
+							$(selector).last().css({'border-bottom-left-radius': '0px', 'border-bottom-right-radius': '0px'}); break;
 						case 'bottom':
 							$(selector).css({borderRadius: '0px 0px 0px 0px'});
 							$(selector).first().css({borderRadius: '5px 5px 0px 0px'}); break;
@@ -84,7 +84,7 @@
 			switch (this.options.layout.name) {
 				case 'top':
 					this.$bar.css({
-						borderRadius: '0px 0px 5px 5px',
+						borderRadius: '0px 0px 0px 0px',
 						borderBottom: '2px solid #eee',
 						borderLeft: '2px solid #eee',
 						borderRight: '2px solid #eee',
@@ -93,7 +93,7 @@
 				break;
 				case 'topCenter': case 'center': case 'bottomCenter': case 'inline':
 					this.$bar.css({
-						borderRadius: '5px',
+						borderRadius: '0px',
 						border: '1px solid #eee',
 						boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
 					});
@@ -103,7 +103,7 @@
 				case 'bottomLeft': case 'bottomRight':
 				case 'centerLeft': case 'centerRight':
 					this.$bar.css({
-						borderRadius: '5px',
+						borderRadius: '0px',
 						border: '1px solid #eee',
 						boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
 					});
@@ -111,7 +111,7 @@
 				break;
 				case 'bottom':
 					this.$bar.css({
-						borderRadius: '5px 5px 0px 0px',
+						borderRadius: '0px 0px 0px 0px',
 						borderTop: '2px solid #eee',
 						borderLeft: '2px solid #eee',
 						borderRight: '2px solid #eee',
@@ -130,8 +130,8 @@
 				case 'alert': case 'notification':
 					this.$bar.css({backgroundColor: '#FFF', borderColor: '#CCC', color: '#444'}); break;
 				case 'warning':
-					this.$bar.css({backgroundColor: '#FAA732', borderColor: '#F89406', color: '#444'});
-					this.$buttons.css({borderTop: '1px solid #FFC237'}); break;
+					this.$bar.css({backgroundColor: '#FFF', borderColor: '#F89406', color: '#444'});
+					this.$buttons.css({borderTop: '1px solid transparent'}); break;
 				case 'error':
 					this.$bar.css({backgroundColor: '#DA4F49', borderColor: '#BD362F', color: '#FFF'});
 					this.$message.css({fontWeight: 'bold'});
