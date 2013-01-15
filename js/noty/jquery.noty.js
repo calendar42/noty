@@ -124,12 +124,14 @@ if (typeof Object.create !== 'function') {
             if (self.options.callback.onShow)
                 self.options.callback.onShow.apply(self);
 
+            self.animating = true;
             self.$bar.animate(
                 self.options.animation.open,
                 self.options.animation.speed,
                 self.options.animation.easing,
                 function () {
                     if (self.options.callback.afterShow) self.options.callback.afterShow.apply(self);
+                    self.animating = false;
                     self.shown = true;
                 });
 
@@ -144,7 +146,6 @@ if (typeof Object.create !== 'function') {
         }, // end show
 
         close:function () {
-
             if (this.closed) return;
 
             var self = this;
@@ -157,7 +158,11 @@ if (typeof Object.create !== 'function') {
                     }
                 });
                 $.noty.queue = queue;
-                return;
+
+                // continue cleanup if the noty is still animating
+                if (!this.animating) {
+                    return;
+                }
             }
 
             self.$bar.addClass('i-am-closing-now');
@@ -238,7 +243,8 @@ if (typeof Object.create !== 'function') {
         },
 
         closed:false,
-        shown:false
+        shown:false,
+        animating: false
 
     }; // end NotyObject
 
