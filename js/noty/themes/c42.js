@@ -13,8 +13,8 @@
 						case 'topCenter': case 'topLeft': case 'topRight':
 						case 'bottomCenter': case 'bottomLeft': case 'bottomRight':
 						case 'center': case 'centerLeft': case 'centerRight': case 'inline':
-							$(selector).css({borderRadius: '0px 0px 0px 0px'});
-							$(selector).first().css({'border-top-left-radius': '0px', 'border-top-right-radius': '0px', 'border-width': '4px'});
+							$(selector).css({borderRadius: '0px 0px 0px 0px', 'border-width': '4px', 'border-top-width': '0px'});
+							$(selector).first().css({'border-top-left-radius': '0px', 'border-top-right-radius': '0px', 'border-top-width': '4px', 'border-left-width': '4px', 'border-right-width': '4px'});
 							$(selector).last().css({'border-bottom-left-radius': '0px', 'border-bottom-right-radius': '0px'}); break;
 						case 'bottom':
 							$(selector).css({borderRadius: '0px 0px 0px 0px'});
